@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> -->
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
+  <link rel="stylesheet" href="./animate.css">
+  <link href="./styles.css" rel="stylesheet">
+  <title>Mcc</title>
+</head>
+
+<body>
+  <div class="right-menu">
+    <div id="question-mark"><img src="./img/question.png" alt=""></div>
+    <div id="DragBar"></div>
+    <div id="subtract"></div>
+    <div id="close"></div>
+  </div>
+  <h1 id="shock"><i>Mcc</i></h1>
+  <!-- public-start -->
+  <!-- public-end -->
+
+  <!-- login-start -->
+  <div id="login-page" style="display:none;">
+    <div id="loading">
+      <svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        x="0px" y="0px" width="20px" height="20px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;"
+        xml:space="preserve">
+        <path fill="#000"
+          d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z">
+          <animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25"
+            dur="0.6s" repeatCount="indefinite" />
+        </path>
+      </svg>
+    </div>
+    <div id="login">
+      <input type="text" required="required" placeholder="邮箱" name="u" id="user" spellcheck="false"></input>
+      <input type="password" required="required" placeholder="密码" name="p" id="pwd" spellcheck="false"></input>
+      <h6></h6>
+      <button id="but" type="submit">登录</button>
+    </div>
+  </div>
+  <!-- login-page-end -->
+
+  <!-- function-page-start -->
+  <div id="function-page" style="display: none;">
+    <div class="left-menu">
+      <div id="add"><img src="./img/add.png" alt=""></div>
+    </div>
+    <div id="cmd">
+      <div id="scalefunc">
+
+      </div>
+      <div id="tips">请点击左上角加号添加命令♥️</div>
+    </div>
+    <!-- 切换账号 -->
+    <div id="quit" style="display: none;">
+      <img src="./img/quit.png" alt="">
+    </div>
+  </div>
+  <!-- function-page-end -->
+
+
+  <!-- 创建命令弹窗 -->
+  <div class="cmd_window" style="display: none;">
+    <div class="add_cmd">
+      <div class="add_cmd_content">
+        <input type="text" id="cmd_name" placeholder="请填写监听口令">
+        <textarea id="cmd_txt" placeholder="command..." spellcheck="false"></textarea>
+        <div class="cmd_btn">
+          <div id="test_btn">test</div>
+          <div id="cancle_btn">cancle</div>
+          <div id="save_btn">save</div>
+          <div id="save_btn_bak">save</div>
+        </div>
+      </div>
+    </div>
+    <div class="bg"></div>
+  </div>
+
+  <!-- 错误弹窗 -->
+  <div id="error_window">
+    <div id="error">
+      <div class="error_img"><svg t="1645784145994" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2155" width="48" height="48"><path d="M1001.661867 796.544c48.896 84.906667 7.68 157.013333-87.552 157.013333H110.781867c-97.834667 0-139.050667-69.504-90.112-157.013333l401.664-666.88c48.896-87.552 128.725333-87.552 177.664 0l401.664 666.88zM479.165867 296.533333v341.333334a32 32 0 1 0 64 0v-341.333334a32 32 0 1 0-64 0z m0 469.333334v42.666666a32 32 0 1 0 64 0v-42.666666a32 32 0 1 0-64 0z" fill="#FAAD14" p-id="2156"></path></svg></div>
+      <div class="error_txt">
+        <p>请勿创建相同的命令名称</p>
+      </div>
+      <div id="cancle_error">知道了</div>
+    </div>
+    <div class="error_bg"></div>
+  </div>
+</body>
+<!-- You can also require other files to run in this process -->
+<script type="text/javascript" src="./jquery-1.9.1.min.js"></script>
+<script src="./index.js"></script>
+
+</html>
