@@ -1,4 +1,5 @@
 # Mcc
+基于POP3以及smtp协议的远程控制软件，其前端有electron构建。
 你可以在任何地方远程操控你的电脑
 ## 界面展示
 ![sgyrpn.png](https://files.catbox.moe/sgyrpn.png)
